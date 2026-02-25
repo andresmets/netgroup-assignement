@@ -13,7 +13,7 @@ application needs to be built prior.
 and insecure NoOpPasswordEncoder is used just for demo purposes
 the password and username can be changed in import.sql
 # Deploying application to server environemnt
-* Application is equipped with Dockerfile that builds the image
+* Application is equipped with Dockerfile that builds the docker image
 * Image can be run with docker
 
 # Known issues
