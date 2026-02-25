@@ -1,0 +1,21 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+rootProject.name = 'netgroup-assignement'
+include 'netgroup-server'
+include 'netgroup-ui'
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories{
+        mavenCentral()
+        flatDir {
+            dirs "lib"
+        }
+    }
+    versionCatalogs {
+        libs {
+            version('mockito-version', '5.21.0')
+            library('mockito', 'org.mockito','mockito-core').versionRef('mockito-version');
+        }
+    }
+}
