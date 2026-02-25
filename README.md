@@ -12,6 +12,10 @@ application needs to be built prior.
 * admin username and password are stored in the database
 and insecure NoOpPasswordEncoder is used just for demo purposes
 the password and username can be changed in import.sql
+# Deploying application to server environemnt
+* Application is equipped with Dockerfile that builds the image
+* Image can be run with docker
+
 # Known issues
 * add i18n to react views
 * add open-api specifications to rest endpoints
