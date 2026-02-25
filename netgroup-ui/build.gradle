@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'com.github.node-gradle.node' version '7.1.0'
+}
+
+node {
+    // Specify the Node.js version
+    version = '25.6.1' // or any version you need
+    download = true // download Node.js, otherwise use the system version
+    distBaseUrl = null
+}
+
+tasks.named('clean'){
+    delete 'node_modules'
+    delete 'dist'
+}
+
+tasks.register('npmCi', NpmTask){
+    inputs.file 'package-lock.json'
+    outputs.dir 'node_modules'
+    args = ['ci', '--prefer-offline', '--no-audit']
+}
+
+tasks.register("npmBuildUi", NpmTask){
+    dependsOn tasks.named('npmCi')
+    inputs.dir 'src'
+    inputs.file 'package.json'
+    inputs.file 'package-lock.json'
+    inputs.file 'index.html'
+    inputs.file 'vite.config.ts'
+    outputs.dir 'dist'
+    args = ['run', 'build']
+}
+build.dependsOn npmBuildUi

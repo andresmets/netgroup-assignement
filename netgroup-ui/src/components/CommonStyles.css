@@ -1,0 +1,35 @@
+body{
+    background:white;
+}
+ul{
+    list-style:none;
+}
+ul li {
+    color:black;
+}
+.error {
+    color:red;
+}
+.button{
+    color:black;
+    background:white;
+    border:1px solid gray;
+    padding:10px 10px 10px 10px;
+    border-radius: 15px;
+    font-weight:bold;
+    margin-top:10px;
+    height: 40px;
+    width: 100%;
+}
+input{
+    padding:10px;
+    width:100%;
+    margin-bottom:10px;
+}
+.text{
+    color:black;
+}
+.user-form{
+    width: 600px;
+    height: auto
+}
