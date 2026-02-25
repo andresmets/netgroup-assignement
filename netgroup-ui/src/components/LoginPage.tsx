@@ -18,7 +18,6 @@ function LoginPage() {
             await axios.post('http://localhost:8081/auth/signin', { username, password });
             history('/register');
         } catch (error:any) {
-            console.error('Login failed:', error.response ? error.response.data : error.message);
             setError('Invalid username or password.');
         }
     };

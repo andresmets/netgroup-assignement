@@ -32,7 +32,6 @@ function BookingPage() {
             history('/');
         } catch (error:any) {
             // Handle signup error
-            console.error('Register failed:', error.response ? error.response.data : error.message);
             setError(error.response ? error.response.data : error.message);
         }
     };
