@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import type {IError} from "../types/Types";
+import type {IError, IEvent} from "../types/Types";
 
 import './Dashboard.css';
 import './CommonStyles.css';
@@ -18,12 +18,11 @@ function Dashboard() {
             const response = await axios.get('http://localhost:8081/get/events');
             setEvents(response.data);
         } catch (error:any) {
-            console.error('Event loading failed:', error.response ? error.response.data : error.message);
             setError(error.response ? error.response.data : error.message);
         }
     };
 
-   const listItems = events.map((event:any) =>
+   const listItems = events.map((event:IEvent) =>
        <Link to={'booking/' + event.id}>
        <li key={event.id}>
          <p>
