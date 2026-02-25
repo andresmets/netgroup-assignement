@@ -15,6 +15,7 @@ the password and username can be changed in import.sql
 # Deploying application to server environemnt
 * Application is equipped with Dockerfile that builds the docker image
 * Image can be run with docker
+* Alternatively the application can be run with jre in any server environemnt (linux, win) check the "Running application" section
 
 # Known issues
 * add i18n to react views
