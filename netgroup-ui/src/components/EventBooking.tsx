@@ -32,7 +32,7 @@ function BookingPage() {
             history('/');
         } catch (error:any) {
             // Handle signup error
-            setError(error.response ? error.response.data : error.message);
+            setError({ error: error.message });
         }
     };
 

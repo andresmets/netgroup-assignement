@@ -35,7 +35,7 @@ function RegisterPage() {
             setRegisteredEvent(response.data.eventName);
             history('/register');
         } catch (error:any) {
-            setError(error.response ? error.response.data : error.message);
+            setError({ error: error.message });
         }
     };
 

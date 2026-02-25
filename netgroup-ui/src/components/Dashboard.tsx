@@ -18,7 +18,7 @@ function Dashboard() {
             const response = await axios.get('http://localhost:8081/get/events');
             setEvents(response.data);
         } catch (error:any) {
-            setError(error.response ? error.response.data : error.message);
+            setError({ error: error.message });
         }
     };
 
