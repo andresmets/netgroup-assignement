@@ -41,7 +41,7 @@ function Dashboard() {
                         <button className="button">Login</button>
                     </Link>
                 </div>
-                <ul className="text-left">{listItems}</ul>
+                {listItems.length != 0  ? <ul className="text-left">{listItems}</ul> : <p className="text">No events have been added yet</p>}
             </div>;
 }
 

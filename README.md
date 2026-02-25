@@ -4,8 +4,10 @@
 Gradle build system is used for building and project is equipped with gradle-wrapper
 * to build use ./gradlew build to build with tests 
 # Running application
-Application runs in docker container, application needs to be built prior.
-* to run applicaiton: docker compose -f docker-compose.yml up --build
+Application runs in docker container or it can be executed from command line with java,
+application needs to be built prior.
+* to run the applicaiton in docker: docker compose -f docker-compose.yml up --build
+* to run the application from command line: java -jar netgroup-server-0.0.1-SNAPSHOT.jar from build/libs direcotory of netgroup-server module
 * application is available from url: http://localhost:8081
 * admin username and password are stored in the database
 and insecure NoOpPasswordEncoder is used just for demo purposes
