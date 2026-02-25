@@ -27,7 +27,7 @@ function LoginPage() {
         <div>
             <div className="user-form">
                     <h2 className="text-center">Login Page</h2>
-                    <input placeholder='Username' id='username' value={username} type='text' onChange={(e) => setUsername(e.target.value)} />
+                    <input placeholder='email' id='username' value={username} type='email' onChange={(e) => setUsername(e.target.value)} />
                     <input placeholder='Password' id='password' type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
                     {error && <p className="error">{error}</p>} {/* Render error message if exists */}
 
