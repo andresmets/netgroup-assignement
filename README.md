@@ -1,7 +1,7 @@
 # Prerequisites
 * jdk 24 to view and compile the soources
 # Running application
-Application runs in docker container 
+Application runs in docker container
 * to run applicaiton: docker compose -f docker-compose.yml up --build
 * application is available from url: http://localhost:8081
 # Building application
