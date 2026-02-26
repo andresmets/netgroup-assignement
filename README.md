@@ -22,5 +22,6 @@ the password and username can be changed in import.sql
 * add open-api specifications to rest endpoints
 * set up React proxy to run UI and server in different containers separately
 * fix sonarqube warnings
+* modify server error messages to user meaningful error messages
 # Information about application
 Application uses JWT token that is stored in httpOnly cookie for authentication.
