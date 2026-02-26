@@ -30,25 +30,8 @@ public class ApplicationConfig {
                         authorize -> authorize.requestMatchers("/add/**")
                                 .authenticated().anyRequest().permitAll())
                 .addFilterBefore(new JwtTokenValidator(), BasicAuthenticationFilter.class)
-                .csrf(csrf -> csrf.disable())
-                .cors(cors -> cors.configurationSource(corsConfigurationSource()));
+                .csrf(csrf -> csrf.disable());
         return http.build();
-    }
-
-    private CorsConfigurationSource corsConfigurationSource() {
-        return new CorsConfigurationSource() {
-            @Override
-            public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
-                CorsConfiguration ccfg = new CorsConfiguration();
-                ccfg.setAllowedOrigins(Arrays.asList("http://localhost:5174"));
-                ccfg.setAllowedMethods(Collections.singletonList("*"));
-                ccfg.setAllowCredentials(true);
-                ccfg.setAllowedHeaders(Collections.singletonList("*"));
-                ccfg.setExposedHeaders(Arrays.asList("Authorization"));
-                ccfg.setMaxAge(3600L);
-                return ccfg;
-            }
-        };
     }
 
     @Bean
