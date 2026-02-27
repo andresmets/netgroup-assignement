@@ -1,5 +1,5 @@
 # Prerequisites
-* jdk 24 to view and compile the soources
+* jdk 24 to compile the soources
 # Building application
 Gradle build system is used for building and project is equipped with gradle-wrapper
 * to build use ./gradlew build to build with tests 
